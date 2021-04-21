@@ -10,7 +10,7 @@
 
 ## Usage
 
-Enter each folder and follow the README instructions in each!
+Enter each folder and follow the README instructions to run Frontend and Backend!
 
 ## Authors
 
