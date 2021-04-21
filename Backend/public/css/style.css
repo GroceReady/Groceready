@@ -1,0 +1,314 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+/**
+ * partly taken from https://stackoverflow.com/questions/3146395/how-do-i-increase-the-font-size-based-on-the-window-width
+ */
+
+body.wide {
+  font-size: 100% imp !important;
+}
+
+body.standard {
+  font-size: 80% imp !important;
+}
+
+body.narrow {
+  font-size: 70% !important;
+}
+
+body.extraNarrow {
+  font-size: 50% !important;
+}
+
+.nav-ele:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.nav-ele {
+  color: gray;
+  font-weight: bold;
+}
+
+/* .navbarlocal {
+} */
+
+.header-left {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.header-logo {
+  display: flex;
+  flex: 1;
+  /* width: 30px;
+    height: 30px; */
+  align-self: center;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  /* flex: 1; */
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.RataTweetButton {
+  /* border: 2px solid white; */
+  background-color: #4ab3f4;
+  color: white;
+  /* padding: 14px 28px; */
+  /* font-size: 16px; */
+  /* cursor: pointer; */
+  margin-right: 10px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.navbarlocal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  height: 46px;
+  background-color: white;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+#content-wrapper {
+  max-width: 1190px;
+  margin: 56px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.page-wrapper {
+  background-color: #e6ecf0;
+}
+
+.content-window {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  /* margin: 5px; */
+  margin-right: 5px;
+  margin-left: 5px;
+  border-top: 10px solid #e6ecf0;
+}
+
+#content-center {
+  max-width: 610px;
+}
+
+#content-right {
+  width: 290px;
+}
+
+.profile-picture {
+  z-index: 50;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 3px solid white;
+  /* width: 150px; */
+}
+
+#content-left {
+  width: 290px;
+}
+
+#cover-picture-segment {
+  /* grid-area: 1 / 1 / 2 / 2; */
+  /* position: fixed;
+    margin-left: 0;
+    margin-top: 0; */
+  /* left:0; */
+  /* top:0 */
+}
+
+#cover-picture-segment > img {
+  max-width: 290px;
+  width: auto;
+  height: auto;
+}
+
+#profile-picture-segment {
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  display: flex;
+  /* position: fixed; */
+  margin-left: 0;
+  margin-top: -10px;
+}
+
+#profile-picture-segment > .profile-name-handle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.profile-name {
+  font-weight: bold;
+}
+
+#profile-picture-segment > .profile-name-handle > .profile-name {
+  text-decoration: underline;
+}
+
+.profile-handle {
+  color: gray;
+}
+
+#profile-stats-segment {
+  margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-weight: bold;
+}
+
+#profile-picture-segment > .profile-picture {
+  width: 80px;
+  height: 80px;
+}
+
+.profile-stat > .profile-stat-name {
+  color: gray;
+}
+
+.profile-stat > .profile-stat-number {
+  color: #4ab3f4;
+}
+
+/* Center content & tweets */
+
+#searchBarDiv {
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#feedController {
+  border-bottom: 10px solid #e6ecf0;
+}
+
+.message,
+.profile-summary {
+  min-height: 51px;
+  border-bottom: 1px solid #e6ecf0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.message-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.message-header > div {
+  margin-right: 5px;
+}
+
+.message > .profile-picture,
+.profile-summary > .profile-picture {
+  margin-left: 10px;
+  margin-right: 5px;
+  height: 48px;
+  width: 48px;
+}
+
+.date {
+  color: gray;
+  margin-left: auto;
+}
+
+#follow-recommendations {
+  font-size: large;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.profile-summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.profile-name-handle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.profile-summary-text {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.profile-name-handle > div {
+  margin-right: 5px;
+}
+
+.follow-button {
+  border: 2px solid #4ab3f4;
+  background-color: white;
+  color: #4ab3f4;
+  font-weight: bold;
+  justify-self: center;
+  align-self: center;
+  border-radius: 20px;
+  padding: 4px;
+  width: 100px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 950px) {
+  .nav-icon {
+    display: inline;
+  }
+  .nav-text {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .nav-icon {
+    display: none;
+  }
+  .nav-text {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #content-right {
+    display: none;
+  }
+}
+
+.header {
+  display: none;
+}

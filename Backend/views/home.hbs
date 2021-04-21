@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-center align-items-center">
+    <a class="row sr-only sr-only-focusable" href="#chatRoomList">Skip to main content</a>
+</div>
+<div class="d-flex flex-column align-items-center">
+    <h1> RataChatty Home Page </h1>
+    <p> <em> Gone are the days of us Rats cut off from our brethren by a mere lack of communication
+            infrastructure.</em> </p>
+    <p> <em> With RataChatty, Rats are more connected than ever. </em> </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-10 offset-1 border border-primary rounded">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center" id="chatRoomList">
+                    <h2> See existing chatrooms here and click to join: </h2>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-8 offset-2" role="navigation">
+                    <ul>
+                        {{#each rooms}}
+                        <li>
+                            <a href={{this.id}}><strong>ID: {{this.id}}; Name: {{this.name}}</strong></a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{!-- TODO: <a href=".../{roomname}"> </a> for each--}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-10 offset-1 border border-secondary rounded">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <h2>Or... Start your own!</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="row form-group">
+                <form class="col-8 offset-2" action="/create" method="POST">
+                    <label for="name">Just Enter a Room Name To Launch!</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="newRoom">
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+$(function () {
+    var viewPortWidth = $(document.defaultView).width();
+    console.log(viewPortWidth);
+    if (viewPortWidth > 1000) {console.log("foxomg wodth"); $('body').addClass('wide'); } else if (viewPortWidth > 700) { $('body').addClass('standard'); } else if (viewPortWidth > 500) { $('body').addClass('narrow'); } else { $('body').addClass('extraNarrow'); }
+});
+</script>
+{{!--
+<script src="../controllers/home.js"></script> --}}
